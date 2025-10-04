@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Register</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <!-- <label for="username">Username</label>
+            <input type="text" name="username" required minlength="5" pattern="[A-Za-z]{5,}" title="At least 5 letters, upper/lower case">
+
+            <label for="password">Password</label>
+            <input type="password" name="password" required pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[$%@*]).{5,}" title="Min 5 chars, include alpha, number, and one of $, %, @, *">
+
+            <label for="user_type">User Type</label>
+            <select name="user_type">
+                <option value="player">Player</option>
+                <option value="admin">Admin</option>
+            </select> -->
+            <fieldset class="form-group">
+                {{ form.as_p }}
+            </fieldset>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already registered?</p>
+    </div>
+</body>
+</html>
+<!-- <a href="{% url 'login' %}">Login here</a> -->

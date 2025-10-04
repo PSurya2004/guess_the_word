@@ -1,0 +1,7 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+  <h1>Daily Report for {{ date }}</h1>
+  <p>Users played: {{ users_played }}</p>
+  <p>Correct guesses: {{ correct_guesses }}</p>
+{% endblock %}
